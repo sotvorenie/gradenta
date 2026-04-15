@@ -1,0 +1,69 @@
+@use '../../helpers' as *;
+
+.appointment {
+
+  &__inner {
+    padding-block: rem(70) rem(80);
+
+    @include tablet {
+      padding-block: rem(50);
+    }
+
+    @include mobile {
+      padding-block: rem(30);
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(47);
+
+    @include tablet {
+      margin-bottom: rem(37);
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: rem(36);
+
+    @include tablet-above {
+      max-width: 79%;
+    }
+
+    @include tablet {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(25) rem(225);
+
+    @include tablet {
+      gap: rem(25) rem(100);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: rem(20);
+    }
+  }
+
+  &__icon {
+    @include square(44);
+
+    border-radius: var(--radius-regular);
+    background: #F3920024;
+    margin-bottom: rem(9);
+    width: fit-content;
+    padding: rem(6);
+  }
+
+  &__item {
+
+    &-title {
+      color: var(--color-accent);
+      margin-bottom: rem(20);
+    }
+  }
+}

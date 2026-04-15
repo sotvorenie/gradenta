@@ -1,0 +1,26 @@
+@use '../helpers' as *;
+
+.section {
+
+  &__title {
+    color: var(--color-blue);
+    font-weight: 700;
+    position: relative;
+    width: fit-content;
+
+    &::after {
+      @include abs-x;
+
+      content: '';
+      top: calc(100% + 12px);
+      width: rem(300);
+      height: rem(8);
+      border-radius: var(--radius-regular);
+      background: var(--orange-blue-gradient);
+    }
+
+    &.m-auto::after {
+      width: min(100%, #{rem(300)});
+    }
+  }
+}

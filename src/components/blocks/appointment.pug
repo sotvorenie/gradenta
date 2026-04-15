@@ -1,0 +1,17 @@
+include ../common/section-title
+
+section.appointment
+    div.appointment__inner.container
+        +section-title('Назначение', 'appointment__title', false)
+
+        p.appointment__subtitle.h4.text-w700 Мы разработали облачное решение с применением искусственного интеллекта, которое позволяет автоматизировать:
+
+        ul.appointment__list
+            each appointment in appointments
+                li.appointment__item
+                    div.appointment__icon.flex-center
+                        img(src=appointment.icon)
+
+                    p.appointment__item-title.h5.text-w700= appointment.title
+
+                    p.appointment__item-text= appointment.text
