@@ -1,0 +1,21 @@
+
+section.request.section.position-relative
+    div.request__inner.section__inner.container
+        div.request__title.text-w700 Готовы оптимизировать процессы управления строительством?
+
+        form.request__form
+            input(placeholder="Ваше имя" type="text" name="name" required).request__input.input
+
+            input(placeholder="Ваш телефон" type="tel" name="phone" required).request__input.input
+
+            input(placeholder="Ваш e-mail" type="email" name="email" required).request__input.input
+
+            label.request__label.flex
+                input.checkbox__input.visually-hidden(type="checkbox" name="policy" checked)
+                span.checkbox__box
+
+                span Даю свое Согласие на обработку персональных данных согласно Политике  обработки персональных данных
+
+            button(type="submit").request__submit.flex-center.text-w700 Запросить демонстрацию
+
+    img(src="/images/common/form-bg.png" loading="lazy").request__img.position-absolute.hidden-mobile

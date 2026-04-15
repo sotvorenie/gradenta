@@ -1,0 +1,39 @@
+@use '../helpers' as *;
+
+.checkbox {
+
+  &__input {
+
+    &:checked + .checkbox__box {
+      background-color: var(--color-blue);
+      border-color: var(--color-blue);
+
+      &::after {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    &:focus-visible + .checkbox__box {
+      box-shadow: 0 0 0 rem(3) rgba(var(--color-blue-rgb), 0.2);
+    }
+  }
+
+  &__box {
+    @include square(17);
+
+    flex-shrink: 0;
+    border: var(--border);
+    background: var(--color-light);
+    position: relative;
+    transition: all var(--transition-duration);
+
+    &::after {
+      @include abs-center;
+
+      content: "✓";
+      opacity: 0;
+      color: var(--color-light);
+    }
+  }
+}

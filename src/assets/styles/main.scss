@@ -7,11 +7,14 @@
 
 @use 'blocks/accordion';
 @use 'blocks/section';
+@use 'blocks/checkbox';
+@use 'blocks/input';
 
 @use 'blocks/hero';
 @use 'blocks/header';
 @use 'blocks/banner';
 @use 'blocks/burger-menu';
+@use 'blocks/request';
 
 @use 'blocks/sections/appointment';
 @use 'blocks/sections/economic-effect';

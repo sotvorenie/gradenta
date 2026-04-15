@@ -82,8 +82,7 @@ a {
 }
 
 :focus-visible {
-  outline: rem(2) dashed var(--color-light);
-  outline-offset: rem(4);
+  outline: rem(2) solid var(--color-accent);
   transition-duration: 0s !important;
 }
 
