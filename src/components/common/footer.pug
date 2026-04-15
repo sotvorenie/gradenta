@@ -1,0 +1,36 @@
+
+footer.footer.section
+    div.footer__inner.container.section__inner
+        div.footer__left
+            a(href="#").footer__logo.logo
+                img(src="/images/common/logo.svg" height="57" width="280")
+
+            p.footer__about.text-w700 Российская платформа решений по управлению строительством с использованием искусственного интеллекта. Автоматизация подготовки данных для графиков СМР.
+
+            div.footer__contacts
+                p.footer__contacts-title.text-w700 Контакты
+
+                div.footer__contacts-bottom.flex
+                    ul.footer__list
+                        li.footer__item
+                            a(href="mailto:info@gradenta.ru").footer__link.line-link info@gradenta.ru
+                        li.footer__item
+                            a(href="tel:+74951234567").footer__link.line-link +7 (495) 123-45-67
+                        li.footer__item Москва, ул. Примерная, д. 123
+
+                    ul.footer__soc1als.flex
+                        li.footer__soc1als-item
+                            a(href="#").footer__soc1als-link.recolor-svg
+                                include ../icons/footer-telegram
+                        li.footer__soc1als-item
+                            a(href="#").footer__soc1als-link.recolor-svg
+                                include ../icons/footer-max
+
+        div.footer__right
+            p.footer__right-title.text-w700 Разделы
+
+            nav.footer__nav
+                ul.footer__nav-list
+                    each link in links
+                        li.footer__nav-item
+                            a(href="#").footer__nav-link= link.name

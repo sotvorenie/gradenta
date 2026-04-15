@@ -1,0 +1,56 @@
+@use '../helpers' as *;
+
+.footer {
+  background: var(--color-blue);
+  color: var(--color-light);
+
+  &__inner {
+    padding-block: rem(88);
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: fluid(76, 20);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    margin-bottom: fluid(40, 20);
+  }
+
+  &__about {
+    margin-bottom: fluid(50, 30);
+
+    @include mobile-above {
+      max-width: 77%;
+    }
+  }
+
+  &__contacts-title, &__right-title {
+    margin-bottom: fluid(20, 10);
+  }
+
+  &__contacts-bottom {
+    gap: fluid(50, 20);
+
+    @include mobile-above {
+      align-items: end;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__soc1als {
+    gap: rem(20);
+  }
+
+  &__nav-item:not(:last-child) {
+    margin-bottom: rem(5);
+  }
+}

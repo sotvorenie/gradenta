@@ -9,21 +9,6 @@
     gap: rem(20);
   }
 
-  &__logo {
-    width: rem(280);
-    height: rem(57);
-
-    @include laptop-s {
-      width: rem(235);
-      height: rem(48);
-    }
-
-    @include mobile {
-      width: rem(170);
-      height: auto;
-    }
-  }
-
   &__nav {
 
     @include laptop-s-above {
