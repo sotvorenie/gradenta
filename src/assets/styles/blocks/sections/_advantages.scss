@@ -1,0 +1,73 @@
+@use '../../helpers' as *;
+
+.advantages {
+
+  &__inner {
+    padding-block: rem(78) rem(133);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(30) rem(34);
+
+    @include tablet {
+      gap: rem(20);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: rem(15);
+    }
+  }
+
+  &__item {
+    border: var(--border);
+    border-radius: var(--radius-big);
+    padding: rem(27) rem(50);
+
+    @include tablet {
+      padding: rem(20);
+    }
+
+    @include mobile {
+      padding: rem(15);
+    }
+
+    &-title {
+      margin-bottom: rem(5);
+      color: var(--color-blue);
+    }
+  }
+
+  &__icon {
+    width: rem(50);
+    height: rem(50);
+    background: #F3920024;
+    border-radius: var(--radius-regular);
+    margin-bottom: rem(15);
+
+    @include mobile {
+      width: rem(40);
+      height: rem(40);
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__tag {
+    top: rem(27);
+    right: rem(25);
+    background: var(--color-gray-d9);
+    color: var(--color-gray-99);
+    min-width: rem(136);
+    padding-inline: rem(10);
+    border-radius: var(--radius-big);
+    height: rem(35);
+    font-size: rem(15);
+
+    @include mobile {
+      min-width: rem(110);
+      font-size: rem(13);
+    }
+  }
+}

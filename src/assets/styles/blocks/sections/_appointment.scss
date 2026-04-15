@@ -34,12 +34,11 @@
   }
 
   &__icon {
-    @include square(44);
-
     border-radius: var(--radius-regular);
     background: #F3920024;
     margin-bottom: rem(9);
-    width: fit-content;
+    width: rem(44);
+    height: rem(44);
     padding: rem(6);
   }
 

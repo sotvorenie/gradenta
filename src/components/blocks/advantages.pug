@@ -1,0 +1,17 @@
+include ../common/section-title
+
+section.advantages.section
+    div.advantages__inner.section__inner.container
+        +section-title('Преимущества')
+
+        ul.advantages__list
+            each item in advantages
+                li.advantages__item.position-relative
+                    span.advantages__tag.position-absolute.flex-center= item.tag
+
+                    div.advantages__icon.flex-center
+                        img(src=item.icon)
+
+                    p.advantages__item-title.h6.text-w700= item.title
+
+                    p= item.text
