@@ -2,6 +2,28 @@
 
 .section {
 
+  &:not(.pt) .section__inner {
+
+    @include tablet {
+      padding-block: rem(50);
+    }
+
+    @include mobile {
+      padding-block: rem(30);
+    }
+  }
+
+  &.pt .section__inner {
+
+    @include tablet {
+      padding-top: rem(50);
+    }
+
+    @include mobile {
+      padding-top: rem(30);
+    }
+  }
+
   &__title {
     color: var(--color-blue);
     margin-bottom: fluid(75, 30);
