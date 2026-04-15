@@ -1,3 +1,29 @@
 include ../icons/logo
 
-header.header
+header.header.container
+    div.header__inner.flex.flex-align-end.flex-justify-between
+        a(href="#").header__logo
+            img(src="/images/common/logo.svg" height="57" width="280")
+
+        nav.header__nav.hidden-tablet
+            ul.header__list.flex.flex-align-center
+                each link in links
+                    li.header__item(class=link.submenu ? 'header__item--has-submenu' : '').position-relative
+                        a.header__link(href=link.url).text-nowrap= link.name
+                        if link.submenu
+                            ul.header__submenu.position-absolute.z-10
+                                each sub in link.submenu
+                                    li.header__submenu-item.text-center.text-nowrap
+                                        a.header__submenu-link(href=sub.url)= sub.name
+
+        div.header__soc1als.flex.flex-align-center.hidden-tablet
+            a(href="#")
+                include ../icons/header-max
+
+            a(href="tel:tel:+74951234567").line-link.text-nowrap +7 (495) 123-45-67
+
+        button(type="button").burger-menu__btn.visible-tablet
+            span.open
+                include ../icons/burger-menu
+            span.close.visually-hidden
+                include ../icons/cross

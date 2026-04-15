@@ -1,0 +1,21 @@
+
+div.burger-menu.position-fixed
+    ul.burger-menu__list.flex.flex-column
+        each link in links
+            li.burger-menu__item(class=link.submenu ? 'accordion' : '')
+
+                if link.submenu
+                    div.accordion__header.burger-menu__header
+                        a.burger-menu__link.accordion__control(href="javascript:void(0)")= link.name
+
+                        button(type="button").accordion__toggle
+                            include ../icons/arrow
+
+                    div.accordion__hidden
+                        div.accordion__hidden-wrapper
+                            ul.burger-menu__links
+                                each sub in link.submenu
+                                    li.burger-menu__links-item
+                                        a.burger-menu__links-link(href=sub.url)= sub.name
+                else
+                    a.burger-menu__link(href=link.url)= link.name

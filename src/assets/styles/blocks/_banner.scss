@@ -1,0 +1,69 @@
+@use '../helpers' as *;
+
+.banner {
+
+  &__inner {
+    max-width: 59%;
+    color: var(--color-light);
+    padding-block: rem(100);
+
+    @include laptop-s {
+      max-width: 80%;
+    }
+
+    @include tablet {
+      max-width: 100%;
+    }
+
+    @include mobile {
+      padding-block: rem(50);
+    }
+  }
+
+  &__title {
+    margin-bottom: fluid(40, 20);
+  }
+
+  &__subtitle {
+    margin-bottom: fluid(30, 20);
+  }
+
+  &__text {
+    margin-bottom: fluid(80, 40);
+  }
+
+  &__btn-bar {
+    gap: rem(30);
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__btn {
+    @include flex-center();
+
+    border-radius: var(--radius-medium);
+    height: fluid(65, 55);
+    padding-inline: fluid(54, 24);
+
+    &.dark {
+      background: var(--color-blue);
+      color: var(--color-light);
+
+      @include hover() {
+        background: var(--color-accent);
+        color: var(--color-blue);
+      }
+    }
+    &.accent {
+      background: var(--color-accent);
+      color: var(--color-blue);
+
+      @include hover {
+        background: var(--color-blue);
+        color: var(--color-light);
+      }
+    }
+  }
+}

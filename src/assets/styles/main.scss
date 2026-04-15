@@ -3,3 +3,11 @@
 @use 'variables';
 @use 'utils';
 @use 'globals';
+@use 'classes';
+
+@use 'blocks/accordion';
+
+@use 'blocks/hero';
+@use 'blocks/header';
+@use 'blocks/banner';
+@use 'blocks/burger-menu';

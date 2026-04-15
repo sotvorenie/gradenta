@@ -1,0 +1,8 @@
+@use '../helpers' as *;
+
+.hero {
+  min-height: 100vh;
+  background:
+          var(--blue-gradient),
+          url("/images/index/banner-bg.png") center/cover no-repeat;
+}

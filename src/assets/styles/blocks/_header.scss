@@ -1,0 +1,81 @@
+@use '../helpers' as *;
+
+.header {
+
+  &__inner {
+    padding-block: rem(30);
+    color: var(--color-light);
+    line-height: 100%;
+    gap: rem(20);
+  }
+
+  &__logo {
+    width: rem(280);
+    height: rem(57);
+
+    @include laptop-s {
+      width: rem(235);
+      height: rem(48);
+    }
+
+    @include mobile {
+      width: rem(170);
+      height: auto;
+    }
+  }
+
+  &__nav {
+
+    @include laptop-s-above {
+      margin-right: rem(65);
+    }
+  }
+
+  &__item {
+
+    &--has-submenu:hover .header__submenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  &__submenu {
+    @include abs-x;
+
+    top: 100%;
+    color: var(--color-dark);
+    background: #fff;
+    padding: rem(10) rem(27);
+    box-shadow: var(--shadow);
+    transform: translateY(5px);
+    min-width: rem(113);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-duration) ease;
+
+    &-item {
+      font-size: rem(18);
+
+      &:not(:last-child) {
+        margin-bottom: rem(8);
+      }
+    }
+  }
+
+  &__link {
+    @include fluid-text(25, 16);
+
+    padding: rem(10) rem(23);
+
+    @include laptop-s {
+      padding: rem(10) rem(15);
+    }
+  }
+
+  &__soc1als {
+    @include fluid-text(18, 14);
+
+    gap: rem(22);
+  }
+}

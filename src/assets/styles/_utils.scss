@@ -10,6 +10,18 @@
   @include visually-hidden;
 }
 
+.hidden-tablet {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.visible-tablet {
+  @include tablet-above {
+    display: none !important;
+  }
+}
+
 .hidden-mobile {
   @include mobile {
     display: none !important;
@@ -56,4 +68,11 @@
   @include hover() {
     color: var(--color-accent) !important;
   }
+}
+
+.line-link {
+  text-decoration: underline !important;
+}
+.color-accent {
+  color: var(--color-accent);
 }

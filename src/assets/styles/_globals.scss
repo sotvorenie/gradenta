@@ -24,6 +24,8 @@ body {
   font-family: var(--font-family-base);
   color: var(--color-dark);
   background-color: var(--color-light-alt);
+  line-height: 1.2;
+  overflow-x: hidden;
 }
 
 main {
@@ -31,17 +33,23 @@ main {
 }
 
 h1, .h1 {
-  @include fluid-text(40, 28);
+  @include fluid-text(58, 28);
 }
 
 h2, .h2 {
-  @include fluid-text(35, 24);
+  @include fluid-text(52, 26);
 }
 
 h3, .h3 {
-  @include fluid-text(22, 18);
+  @include fluid-text(38, 22);
+}
 
-  line-height: 100%;
+h4, .h4 {
+  @include fluid-text(30, 18);
+}
+
+h5, .h5 {
+  @include fluid-text(20, 16);
 }
 
 a,
@@ -51,7 +59,10 @@ input,
 textarea,
 select,
 svg * {
-  transition-duration: var(--transition-duration);
+  transition:
+          color var(--transition-duration),
+          background-color var(--transition-duration),
+          border-color var(--transition-duration);
 }
 
 a {
@@ -72,6 +83,11 @@ a {
   transition-duration: 0s !important;
 }
 
+button {
+  background: transparent;
+  border: none;
+  color: currentColor;
+}
 button[disabled] {
   cursor: default;
   pointer-events: none;

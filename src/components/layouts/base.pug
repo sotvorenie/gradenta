@@ -2,11 +2,14 @@ doctype html
 html(lang="ru")
     head
         meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title
             block title
                 | Page title
     body
-        include ../common/header
+        include ../common/burger-menu
+
+        include ../common/hero
 
         main
             block content
