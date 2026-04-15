@@ -14,14 +14,6 @@
     }
   }
 
-  &__title {
-    margin-bottom: rem(47);
-
-    @include tablet {
-      margin-bottom: rem(37);
-    }
-  }
-
   &__subtitle {
     margin-bottom: rem(36);
 

@@ -1,0 +1,17 @@
+include ../common/section-title
+
+section.economic-effect
+    div.economic-effect__inner.container
+        +section-title('Экономический эффект')
+
+        p.economic-effect__subtitle.h6.text-w700.text-center Экономический эффект применения решения создается за счет:
+
+        div.economic-effect__block
+            div.economic-effect__img-container.img-container
+                img(src="/images/index/economic-effect.png" loading="lazy")
+
+            ul.economic-effect__list
+                each item in economicEffects
+                    li.economic-effect__item.flex.flex-column.flex-justify-center(style=`--color: var(${item.color})`)
+                        p.h5.economic-effect__item-title.text-w700= item.title
+                        p.h6.economic-effect__item-text= item.text

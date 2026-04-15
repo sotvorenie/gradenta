@@ -4,23 +4,32 @@
 
   &__title {
     color: var(--color-blue);
-    font-weight: 700;
-    position: relative;
-    width: fit-content;
+    margin-bottom: fluid(75, 30);
 
     &::after {
       @include abs-x;
 
       content: '';
-      top: calc(100% + 12px);
+      top: calc(100% + #{fluid(30, 10)});
       width: rem(300);
       height: rem(8);
       border-radius: var(--radius-regular);
       background: var(--orange-blue-gradient);
+
+      @include mobile {
+        height: rem(6);
+        width: min(100%, #{rem(300)});
+      }
     }
 
-    &.m-auto::after {
-      width: min(100%, #{rem(300)});
+    &:not(.text-center) {
+      margin-bottom: fluid(45, 30);
+      width: fit-content;
+
+      &::after {
+        top: calc(100% + #{fluid(20, 10)});
+        width: min(100%, #{rem(300)});
+      }
     }
   }
 }
