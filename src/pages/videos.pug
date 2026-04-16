@@ -1,0 +1,35 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/section-title
+include ../components/common/media-center-tabs
+include ../components/common/video-btn
+
+block title
+    | Статьи
+
+block hero
+    +hero('', false)
+
+    block banner-content
+
+
+block content
+    section.media-center.section
+        div.media-center__inner.section__inner.container
+            +section-title('Медиацентр')
+
+            +media-center-tabs(3)
+
+            ul.videos__list.row
+                each item, index in mediaCenterItems
+                    li.videos__item.col-12.mb-col-6
+                        div.videos__img-container.img-container.video-player.position-relative
+                            video(src="/videos/video.mp4" playsinline).js-video-player
+
+                            +video-btn(index)
+
+                        div.videos__info.text-w700
+                            p.videos__date= item.date
+                            p.videos__title= item.title
+
+            button(type="button").media-center__btn Смотреть еще

@@ -4,9 +4,9 @@ section.how-works.section.pt
     div.how-works__inner.section__inner.container
         +section-title('Как работает решение')
 
-        ul.how-works__list
+        ul.how-works__list.row
             each item in howWorks
-                li(class=item.isAccent ? 'is-accent' : '').how-works__item.position-relative.flex.flex-column
+                li(class=item.isAccent ? 'is-accent' : '').how-works__item.position-relative.flex.flex-column.col-12.mb-col-6
                     div.how-works__icon.position-absolute.flex-center
                         img(src=item.icon)
 

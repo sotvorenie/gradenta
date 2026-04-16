@@ -148,7 +148,7 @@
 
   "mediaCenterTabs": ["Новости", "Статьи", "Видео"],
 
-  "mediaCenterArticles": [
+  "mediaCenterItems": [
     {
       "date": "11.03.2026",
       "title": "Автоматизация графиков СМР: где теряются ресурсы",

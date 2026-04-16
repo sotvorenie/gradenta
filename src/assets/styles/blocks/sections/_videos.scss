@@ -1,0 +1,37 @@
+@use '../../helpers' as *;
+
+.videos {
+
+  &__list {
+    --row-gap: #{rem(40)};
+    --column-gap: #{rem(35)};
+
+    @include tablet {
+      --row-gap: #{rem(20)};
+      --column-gap: #{rem(20)};
+    }
+
+    @include mobile {
+      --row-gap: #{rem(15)};
+      --column-gap: #{rem(15)};
+    }
+  }
+
+  &__img-container {
+    width: 100%;
+    border-radius: var(--radius-medium);
+    aspect-ratio: 507/277;
+    margin-bottom: fluid(30, 10);
+  }
+
+  &__info {
+
+    @include tablet-above {
+      max-width: 65%;
+    }
+  }
+
+  &__date {
+    margin-bottom: fluid(35, 15);
+  }
+}

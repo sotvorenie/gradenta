@@ -1,16 +1,14 @@
 @use '../helpers' as *;
 
 .logo {
-  width: rem(280);
-  height: rem(57);
+  width: rem(260);
+  height: auto;
 
   @include laptop-s {
-    width: rem(235);
-    height: rem(48);
+    width: rem(215);
   }
 
   @include mobile {
     width: rem(170);
-    height: auto;
   }
 }
