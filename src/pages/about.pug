@@ -1,4 +1,6 @@
 extends ../components/layouts/base.pug
+include ../components/common/section-title
+include ../components/common/video-btn
 
 block title
     | О продукте
@@ -17,3 +19,22 @@ block hero
 
 block content
     include ../components/blocks/how-works
+
+    each item, index in modules
+        section(class=index < 2 ? 'pt' : '').module.section
+            div.module__inner.section__inner.container
+                +section-title(`Модуль ${index + 1}`)
+
+                div(class=index % 2 === 0 ? 'is-left' : 'is-right').module__content
+                    div.module__left.flex.flex-column
+                        div.module__top
+                            p.module__title.h4.text-w700= item.title
+                            p.module__text= item.text
+                            p.module__about.h6.text-w700 Разработано инженерами для инженеров
+
+                        a(href="#").tag.flex-center Статья
+
+                    div.module__img-container.img-container.video-player.position-relative
+                        video(src="/videos/video.mp4" playsinline).js-video-player
+
+                        +video-btn(index)

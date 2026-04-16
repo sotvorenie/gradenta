@@ -1,0 +1,70 @@
+@use '../../helpers' as *;
+
+.module {
+
+  &:not(.pt) .section__inner {
+    padding-block: rem(80);
+  }
+  &.pt .section__inner {
+    padding-top: rem(80);
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: fluid(52, 15);
+    color: var(--color-blue);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+
+    &.is-right {
+      direction: rtl;
+
+      & > * {
+        direction: ltr;
+      }
+    }
+
+    &.is-left {
+
+      @include mobile-above {
+
+        .tag {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  &__left {
+    gap: rem(20);
+
+    @include mobile {
+      gap: rem(10);
+    }
+  }
+
+  &__top {
+    flex-grow: 1;
+  }
+
+  &__title {
+    margin-bottom: fluid(30, 10);
+  }
+
+  &__text {
+    margin-bottom: fluid(20, 10);
+  }
+
+  &__img-container {
+    background: var(--color-blue);
+    border-radius: var(--radius-medium);
+    aspect-ratio: 534/328;
+
+    @include mobile {
+      order: -1;
+    }
+  }
+}

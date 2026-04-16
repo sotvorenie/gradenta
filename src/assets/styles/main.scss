@@ -10,6 +10,8 @@
 @use 'blocks/checkbox';
 @use 'blocks/input';
 @use 'blocks/logo';
+@use 'blocks/tag';
+@use 'blocks/video-play-btn';
 
 @use 'blocks/hero';
 @use 'blocks/header';
@@ -24,3 +26,4 @@
 @use 'blocks/sections/advantages';
 
 @use 'blocks/sections/how-works';
+@use 'blocks/sections/module';

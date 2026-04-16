@@ -1,0 +1,17 @@
+@use '../helpers' as *;
+
+.tag {
+  font-size: rem(16);
+  border-radius: var(--radius-medium);
+  background: var(--color-light);
+  border: var(--border);
+  min-width: rem(134);
+  width: fit-content;
+  height: rem(30);
+  padding: rem(5) rem(15);
+
+  @include mobile {
+    font-size: rem(14);
+    min-width: rem(100);
+  }
+}

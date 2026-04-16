@@ -5,28 +5,28 @@
   &:not(.pt) .section__inner {
 
     @include tablet {
-      padding-block: rem(50);
+      padding-block: rem(50) !important;
     }
 
     @include mobile {
-      padding-block: rem(30);
+      padding-block: rem(30) !important;
     }
   }
 
   &.pt .section__inner {
 
     @include tablet {
-      padding-top: rem(50);
+      padding-top: rem(50) !important;
     }
 
     @include mobile {
-      padding-top: rem(30);
+      padding-top: rem(30) !important;
     }
   }
 
   &__title {
     color: var(--color-blue);
-    margin-bottom: fluid(75, 40);
+    margin-bottom: fluid(90, 40);
 
     &::after {
       @include abs-x;

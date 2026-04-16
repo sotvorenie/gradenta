@@ -1,0 +1,39 @@
+mixin video-btn(id = '1')
+    - const maskId = `mask_video_${id}`
+    button(type="button" aria-label="Play").video-play-btn.js-video-btn
+        svg(
+            width="67"
+            height="67"
+            viewBox="0 0 67 67"
+            fill="none" xmlns="http://www.w3.org/2000/svg"
+        )
+            mask(
+                id=maskId
+                style="mask-type:luminance"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="67"
+                height="67"
+            )
+                path(
+                    d="M33.0833 65.1667C50.803 65.1667 65.1667 50.803 65.1667 33.0833C65.1667 15.3637 50.803 1 33.0833 1C15.3637 1 1 15.3637 1 33.0833C1 50.803 15.3637 65.1667 33.0833 65.1667Z"
+                    fill="white"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                )
+                path(
+                    d="M26.6665 33.0834V21.9697L36.2915 27.5266L45.9165 33.0834L36.2915 38.6402L26.6665 44.1971V33.0834Z"
+                    fill="black"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                )
+            g(
+                mask=`url(#${maskId})`
+            )
+                path(
+                    d="M-5.4165 -5.41675H71.5835V71.5833H-5.4165V-5.41675Z"
+                    fill="#F39200"
+                )
