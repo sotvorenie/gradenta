@@ -7,11 +7,11 @@
   }
 
   &__list {
-    --row-gap: #{rem(30)};
-    --column-gap: #{rem(15)};
+    --row-gap: #{rem(15)};
+    --column-gap: #{rem(30)};
 
-    @include mobile {
-      --row-gap: #{rem(15)};
+    @include tablet {
+      --column-gap: #{rem(15)};
     }
   }
 
