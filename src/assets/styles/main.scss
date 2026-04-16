@@ -19,6 +19,7 @@
 @use 'blocks/burger-menu';
 @use 'blocks/request';
 @use 'blocks/footer';
+@use 'blocks/media-center';
 
 @use 'blocks/sections/appointment';
 @use 'blocks/sections/economic-effect';
@@ -27,3 +28,5 @@
 
 @use 'blocks/sections/how-works';
 @use 'blocks/sections/module';
+
+@use 'blocks/sections/articles';

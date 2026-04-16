@@ -3,8 +3,11 @@
 .hero {
   --hero-bg: '';
 
-  min-height: 100vh;
   background:
           var(--blue-gradient),
           var(--hero-bg) center/cover no-repeat;
+
+  &:not(.h-fill) {
+    min-height: 100vh;
+  }
 }

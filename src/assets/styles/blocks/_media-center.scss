@@ -1,0 +1,44 @@
+@use '../helpers' as *;
+
+.media-center {
+
+  &__inner {
+    padding-block: rem(80);
+  }
+
+  &__tabs {
+    margin: 0 auto fluid(25, 10);
+    gap: fluid(30, 10);
+    overflow-x: auto;
+    padding-bottom: rem(10);
+
+    &::before,
+    &::after {
+      content: '';
+      margin: auto;
+    }
+  }
+
+  &__tab {
+    font-size: rem(16);
+
+    @include mobile {
+      font-size: rem(14);
+    }
+
+    &.is-active {
+      color: var(--color-accent);
+      pointer-events: none;
+    }
+  }
+
+  &__link {
+    border: var(--border);
+    border-radius: var(--radius-medium);
+    padding: rem(10) rem(50);
+
+    @include hover {
+      border-color: var(--color-accent);
+    }
+  }
+}

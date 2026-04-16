@@ -9,6 +9,18 @@
   border-radius: 50%;
   transition: opacity var(--transition-duration);
 
+  svg > g path {
+    fill: var(--color-accent);
+  }
+  mask {
+    path {
+      &[fill="white"] {
+        fill: white !important;
+        stroke: white !important;
+      }
+    }
+  }
+
   &.is-playing {
     opacity: 0;
     visibility: hidden;

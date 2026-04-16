@@ -1,6 +1,8 @@
-mixin hero(bg = '')
-    div(style=`--hero-bg: url(${bg})`).hero
-        include header
+include header
+
+mixin hero(bg = '', showBanner = true)
+    div(style=`--hero-bg: url(${bg})` class=showBanner ? '' : 'h-fill').hero
+        +header(showBanner)
 
         block banner-content
             include banner

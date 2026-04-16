@@ -2,11 +2,19 @@
 
 .header {
 
+  &.without-banner {
+    background: var(--color-blue);
+  }
+
   &__inner {
-    padding-block: rem(30);
+    padding-block: rem(30) rem(35);
     color: var(--color-light);
     line-height: 100%;
     gap: rem(20);
+
+    @include mobile {
+      padding-block: rem(20);
+    }
   }
 
   &__nav {

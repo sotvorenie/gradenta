@@ -1,1 +1,1 @@
-import"./burgerMenu.js";import"./accordion.js";import"./mask.js";
+import"./burgerMenu.js";import"./accordion.js";import"./mask.js";import"./video.js";

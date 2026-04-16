@@ -1,0 +1,5 @@
+mixin media-center-tabs(activeIndex)
+    ul.media-center__tabs.flex.flex-align-center
+        each tab, index in mediaCenterTabs
+            li(class=activeIndex === index + 1 ? 'is-active' : '').media-center__tab
+                a.media-center__link.text-w700.cursor-pointer= tab
