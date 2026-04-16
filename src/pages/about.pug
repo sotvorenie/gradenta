@@ -3,4 +3,17 @@ extends ../components/layouts/base.pug
 block title
     | О продукте
 
+block hero
+    +hero('/images/about/banner-bg.png')
+        block banner-content
+            div.banner.container
+                div.banner__inner.text-w700
+                    p.banner__title.h2.about__title Российская платформа автоматизации подготовки данных из рабочих чертежей для формирования календарно-сетевой модели строительства.
+
+                    div.banner__btn-bar.flex
+                        a(href="#").banner__btn.dark.h6.text-w700 Получить демонстрацию
+                        a(href="#").banner__btn.accent.h6.text-w700 Скачать презентацию
+
+
 block content
+    include ../components/blocks/how-works

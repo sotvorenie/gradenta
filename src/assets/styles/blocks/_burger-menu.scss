@@ -13,6 +13,10 @@
           transform var(--transition-duration),
           opacity var(--transition-duration);
 
+  @media (min-width: 1023px) {
+    display: none !important;
+  }
+
   &.is-active {
     transform: translateX(0);
     opacity: 1;

@@ -22,6 +22,10 @@
 
   &__title {
     margin-bottom: fluid(40, 20);
+
+    &.about__title {
+      margin-bottom: fluid(200, 120);
+    }
   }
 
   &__subtitle {

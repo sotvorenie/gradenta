@@ -1,0 +1,93 @@
+@use '../../helpers' as *;
+
+.how-works {
+
+  &__inner {
+    padding-top: rem(49);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: fluid(30, 15);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    border: var(--border);
+    border-radius: var(--radius-medium);
+    padding: rem(31) rem(35) rem(20);
+    gap: fluid(35, 20);
+
+    @include tablet {
+      padding: rem(20);
+    }
+
+    &-title {
+      margin-bottom: fluid(20, 10);
+      color: var(--color-accent);
+      max-width: 85%;
+    }
+
+    &-subtitle {
+      margin-bottom: fluid(25, 15);
+      color: var(--color-blue);
+    }
+
+    &.is-accent {
+      background: var(--color-accent);
+
+      .how-works__icon {
+        background: #FFFFFF50;
+      }
+
+      .how-works__item-title, .how-works__item-subtitle, .how-works__item-text {
+        color: var(--color-light);
+      }
+    }
+  }
+
+  &__top {
+    flex-grow: 1;
+  }
+
+  &__icon {
+    @include square(45);
+
+    top: rem(8);
+    padding: rem(10);
+    right: rem(12);
+    background: #F3920024;
+    border-radius: var(--radius-regular);
+
+    @include tablet {
+      @include square(40);
+    }
+
+    @include mobile {
+      @include square(35);
+
+      padding: rem(8);
+    }
+  }
+
+  &__link {
+    font-size: rem(16);
+    border-radius: var(--radius-medium);
+    background: var(--color-light);
+    border: var(--border);
+    min-width: rem(134);
+    width: fit-content;
+    height: rem(30);
+    padding-inline: rem(15);
+
+    @include mobile {
+      height: rem(25);
+      font-size: rem(14);
+      min-width: rem(100);
+    }
+  }
+}
