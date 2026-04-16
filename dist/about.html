@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О продукте
+    </title>
+    <script type="module" crossorigin src="/assets/js/modulepreload-polyfill.js"></script>
+    <script type="module" crossorigin src="/assets/js/mask.js"></script>
+    <script type="module" crossorigin src="/assets/js/accordion.js"></script>
+    <script type="module" crossorigin src="/assets/js/burgerMenu.js"></script>
+    <script type="module" crossorigin src="/assets/js/main.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/css/main.css">
+  </head>
+  <body>
+    <div class="burger-menu position-fixed">
+      <ul class="burger-menu__list flex flex-column">
+        <li class="burger-menu__item"><a class="burger-menu__link" href="#">Главная</a>
+        </li>
+        <li class="burger-menu__item"><a class="burger-menu__link" href="#">О продукте</a>
+        </li>
+        <li class="burger-menu__item accordion">
+          <div class="accordion__header burger-menu__header"><a class="burger-menu__link accordion__control" href="javascript:void(0)">Медиацентр</a>
+            <button class="accordion__toggle" type="button">
+              <svg width="20px" height="800px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <g id="layer1"></g>
+                <path d="M 10 5.2929688 L 1.2929688 14 L 2 14.707031 L 10 6.7070312 L 18 14.707031 L 18.707031 14 L 10 5.2929688 z " style="fill:#222222; fill-opacity:1; stroke:none; stroke-width:0px;"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="accordion__hidden">
+            <div class="accordion__hidden-wrapper">
+              <ul class="burger-menu__links">
+                <li class="burger-menu__links-item"><a class="burger-menu__links-link" href="#">Новости</a></li>
+                <li class="burger-menu__links-item"><a class="burger-menu__links-link" href="#">Статьи</a></li>
+                <li class="burger-menu__links-item"><a class="burger-menu__links-link" href="#">Видео</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="burger-menu__item"><a class="burger-menu__link" href="#">Контакты</a>
+        </li>
+      </ul>
+    </div>
+    <main>
+    </main>
+    <footer class="footer section">
+      <div class="footer__inner container section__inner">
+        <div class="footer__left"><a class="footer__logo logo" href="#"><img src="/images/common/logo.svg" height="57" width="280"></a>
+          <p class="footer__about text-w700">Российская платформа решений по управлению строительством с использованием искусственного интеллекта. Автоматизация подготовки данных для графиков СМР.</p>
+          <div class="footer__contacts">
+            <p class="footer__contacts-title text-w700">Контакты</p>
+            <div class="footer__contacts-bottom flex">
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link line-link" href="mailto:info@gradenta.ru">info@gradenta.ru</a></li>
+                <li class="footer__item"><a class="footer__link line-link" href="tel:+74951234567">+7 (495) 123-45-67</a></li>
+                <li class="footer__item">Москва, ул. Примерная, д. 123</li>
+              </ul>
+              <ul class="footer__soc1als flex">
+                <li class="footer__soc1als-item"><a class="footer__soc1als-link recolor-svg" href="#">
+                    <svg width="39" height="33" viewBox="0 0 39 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M35.2177 0.283241C35.2177 0.283241 38.7792 -1.10551 38.4824 2.26717C38.3835 3.65594 37.4931 8.51657 36.8006 13.774L34.4262 29.3479C34.4262 29.3479 34.2284 31.6294 32.4476 32.0262C30.6668 32.423 27.9957 30.6375 27.501 30.2406C27.1053 29.9431 20.0812 25.4792 17.6079 23.2969C16.9153 22.7017 16.1239 21.5113 17.7068 20.1226L28.0946 10.203C29.2818 9.01258 30.469 6.23507 25.5224 9.60777L11.672 19.0315C11.672 19.0315 10.0891 20.0234 7.12122 19.1306L0.690636 17.1467C0.690636 17.1467 -1.68372 15.6588 2.37247 14.1707C12.2656 9.50849 24.4342 4.74705 35.2177 0.283241Z" fill="white"></path>
+                    </svg></a></li>
+                <li class="footer__soc1als-item"><a class="footer__soc1als-link recolor-svg" href="#">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.4448 0.0225764C5.91261 0.522376 -0.379746 8.02395 0.0178105 17.4835C0.191456 21.624 1.85023 25.1868 2.24321 29.1164C2.34374 30.1343 2.05129 31.3907 3.22111 31.8355C4.66054 32.3811 6.86766 31.4641 8.07404 30.625C8.48531 30.3453 8.87829 30.0197 9.17989 29.6162C10.4274 30.4461 11.6109 31.2486 13.096 31.6062C19.6352 33.179 26.8003 29.5795 29.9853 23.7974C35.9715 12.9348 27.8787 -0.628538 15.4448 0.0225764ZM11.7434 22.6924C11.2271 23.0959 10.729 23.6461 10.1578 23.9625C9.33068 24.4073 9.07479 23.9442 8.76405 23.2105C7.78615 20.8766 7.66734 16.9011 8.23855 14.4571C9.00624 11.1328 11.5698 8.20736 15.093 7.89556C18.6573 7.57917 21.9657 9.39496 23.4599 12.6735C26.7683 19.9687 18.3008 27.1722 11.7434 22.697V22.6924Z" fill="white"></path>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__right">
+          <p class="footer__right-title text-w700">Разделы</p>
+          <nav class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#">Главная</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#">О продукте</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#">Медиацентр</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

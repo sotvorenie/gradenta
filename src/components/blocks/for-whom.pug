@@ -5,8 +5,8 @@ section.for-whom.section.pt
         +section-title('Для кого')
 
         div.for-whom__header.text-w700.hidden-mobile
-            p.h4 Функционал решения
-            p.h4 Кому нужно
+            p Функционал решения
+            p Кому нужно
 
         ul.for-whom__list
             each item in forWhom
@@ -20,4 +20,4 @@ section.for-whom.section.pt
 
                     .for-whom__modules
                         each _, index in Array(item.modules)
-                            span.for-whom__module.flex-center.h6= `Модуль ${index + 1}`
+                            span.for-whom__module.flex-center= `Модуль ${index + 1}`

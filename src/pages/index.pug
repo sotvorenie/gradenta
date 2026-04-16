@@ -3,6 +3,10 @@ extends ../components/layouts/base.pug
 block title
     | Главная
 
+block hero
+    +hero('/images/index/banner-bg.png')
+
+
 block content
     include ../components/blocks/appointment
 

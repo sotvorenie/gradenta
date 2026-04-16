@@ -49,9 +49,9 @@
   }
 
   &__link {
-    @include fluid-text(25, 16);
+    @include fluid-text(23, 16);
 
-    padding: rem(10) rem(23);
+    padding: rem(10) rem(20);
 
     @include laptop-s {
       padding: rem(10) rem(15);

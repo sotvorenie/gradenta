@@ -1,3 +1,5 @@
+include ../common/hero
+
 doctype html
 html(lang="ru")
     head
@@ -9,7 +11,7 @@ html(lang="ru")
     body
         include ../common/burger-menu
 
-        include ../common/hero
+        block hero
 
         main
             block content

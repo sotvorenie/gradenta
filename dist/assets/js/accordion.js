@@ -1,0 +1,1 @@
+document.addEventListener(`DOMContentLoaded`,()=>{let e={isActive:`is-active`};document.querySelectorAll(`.accordion.is-open`)?.forEach(t=>{t.classList.add(e.isActive)}),document.querySelectorAll(`.accordion__header`).forEach(t=>{t.addEventListener(`click`,()=>{t.parentElement.classList.toggle(e.isActive)})})});

@@ -24,7 +24,8 @@
   &__item {
     border: var(--border);
     border-radius: var(--radius-big);
-    padding: rem(27) rem(50);
+    padding: rem(20) rem(45);
+    background: #1E4EBD02;
 
     @include tablet {
       padding: rem(20);
@@ -41,8 +42,8 @@
   }
 
   &__icon {
-    width: rem(50);
-    height: rem(50);
+    width: rem(45);
+    height: rem(45);
     background: #F3920024;
     border-radius: var(--radius-regular);
     margin-bottom: rem(15);
@@ -55,7 +56,7 @@
   }
 
   &__tag {
-    top: rem(27);
+    top: rem(20);
     right: rem(25);
     background: var(--color-gray-d9);
     color: var(--color-gray-99);

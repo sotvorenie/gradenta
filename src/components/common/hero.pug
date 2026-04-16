@@ -1,5 +1,5 @@
+mixin hero(bg = '')
+    div(style=`--hero-bg: url(${bg})`).hero
+        include header
 
-div(style=`--hero-bg: url('/images/index/banner-bg.png')`).hero
-    include header
-
-    include banner
+        include banner

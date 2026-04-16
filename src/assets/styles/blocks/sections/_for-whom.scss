@@ -17,6 +17,8 @@
   }
 
   &__header {
+    @include fluid-text(26, 18);
+
     color: var(--color-light);
     padding-block: rem(52);
     background: var(--color-blue);
