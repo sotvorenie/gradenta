@@ -1,0 +1,41 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/section-title
+
+block title
+    | Контакты
+
+block hero
+    +hero('', false)
+
+    block banner-content
+
+
+block content
+    section.contacts.section
+        div.contacts__inner.section__inner.container
+            +section-title('Контакты')
+
+            p.contacts__title.h4.text-w700.text-center Обсудим внедрение Градента в вашей компании
+
+            ul.contacts__list.text-center.flex.flex-column.h5
+                li.contacts__item
+                    a(href="mailto:info@gradenta.ru").contacts__link.line-link info@gradenta.ru
+                li.contacts__item
+                    a(href="tel:+74951234567").contacts__link.line-link +7 (495) 123-45-67
+                li.contacts__item Москва, ул. Примерная, д. 123
+                
+            ul.contacts__soc1als.flex.flex-justify-center
+                li.contacts__soc1als-item
+                    a(href="#").contacts__soc1als-link.recolor-svg
+                        include ../components/icons/footer-telegram
+                li.contacts__soc1als-item
+                    a(href="#").contacts__soc1als-link.recolor-svg
+                        include ../components/icons/footer-max
+
+            p.contacts__subtitle.h4.text-w700.text-center Оставьте заявку, и мы покажем, как сократить трудозатраты на подготовку графиков СМР уже в текущих проектах.
+
+            a.contacts__btn.text-w700.flex-center.m-auto.cursor-pointer Получить демонстрацию
+                
+
+    include ../components/common/request

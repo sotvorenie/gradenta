@@ -26,7 +26,7 @@
 
   &__title {
     color: var(--color-blue);
-    margin-bottom: fluid(90, 40);
+    margin-bottom: fluid(80, 40);
 
     &::after {
       @include abs-x;
